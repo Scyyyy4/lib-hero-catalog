@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f1eb;
+  --card: #ffffff;
+  --surface: #ffffff;
+  --foreground: #2d2520;
+  --ink: #2d2520;
+  --muted: #7a6f65;
+  --accent: #5c7c5c;
+  --accent-hover: #4a6349;
+  --tag: #ede8df;
+  --border: #e0d9cf;
+  --nav: #faf7f2;
+  --accent-soft: #f0f5f0;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-card: var(--card);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-tag: var(--tag);
+  --color-border: var(--border);
+  --color-nav: var(--nav);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans:
+    ui-sans-serif, system-ui, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  --font-serif:
+    ui-serif, "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", Georgia,
+    serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Consolas", monospace;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@utility card-surface {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow:
+    0 1px 2px rgb(45 37 32 / 0.05),
+    0 4px 14px rgb(45 37 32 / 0.04);
+}
+
+@utility card-interactive {
+  transition-property: box-shadow, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+@utility list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
