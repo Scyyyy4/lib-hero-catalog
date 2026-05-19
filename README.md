@@ -1,80 +1,90 @@
-# 自由英雄目录 · Lib Hero Catalog
+# Lib Hero Catalog
 
-一个专为英雄 / 角色爱好者设计的个人记录平台。用户可以注册登录、创建英雄档案、记录相遇故事，并写下属于自己的日记。
+> *Born in a library during finals week.*
 
-🌐 **线上体验：[lib-hero-catalog.vercel.app](https://lib-hero-catalog.vercel.app)**
+It started with a simple idea from my friend **LING Shuyun** — we were cramming for finals together at the library when she turned to me and said: *"You're an engineering student, right? Can you build something that makes this place a little less boring?"*
 
----
+So I did. **Lib Hero Catalog** is a personal record-keeping app for the library — a place to catalog the interesting people you spot, log the encounters that break the monotony, and capture your thoughts in a diary. Because every library has its own cast of characters.
 
-## ✨ 功能特性
-
-- 🔐 **用户认证** — 邮箱注册 / 登录，支持邮件验证
-- 🦸 **英雄档案** — 创建和管理你的英雄角色信息
-- ⚔️ **相遇记录** — 记录与英雄之间的每一次相遇
-- 📖 **日记系统** — 写下你的冒险日志和个人感悟
+🌐 **Live at: [lib-hero-catalog.vercel.app](https://lib-hero-catalog.vercel.app)**
 
 ---
 
-## 🛠 技术栈
+## Features
 
-| 层级 | 技术 |
-|------|------|
-| 前端框架 | [Next.js 14](https://nextjs.org) (App Router) |
-| 语言 | TypeScript |
-| 样式 | Tailwind CSS |
-| 后端 / 数据库 | [Supabase](https://supabase.com) (PostgreSQL + Auth + RLS) |
-| 部署 | [Vercel](https://vercel.com) |
+- 🔐 **Auth** — Sign up / sign in with email verification
+- 🦸 **Hero Profiles** — Catalog the interesting people you spot in the library
+- ⚔️ **Encounter Log** — Record every memorable sighting or interaction
+- 📖 **Diary** — Write down your thoughts, feelings, and study-session stories
 
 ---
 
-## 🚀 本地运行
+## Tech Stack
 
-### 1. 克隆项目
+| Layer | Technology |
+|-------|------------|
+| Framework | [Next.js 14](https://nextjs.org) (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Backend / DB | [Supabase](https://supabase.com) (PostgreSQL + Auth + RLS) |
+| Deployment | [Vercel](https://vercel.com) |
+
+---
+
+## Getting Started
+
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/Scyyyy4/lib-hero-catalog.git
 cd lib-hero-catalog
 ```
 
-### 2. 安装依赖
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. 配置环境变量
+### 3. Set up environment variables
 
-在项目根目录创建 `.env.local` 文件：
+Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL=你的_Supabase_项目_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=你的_Supabase_Anon_Key
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-> 在 [Supabase Dashboard](https://supabase.com/dashboard) → 项目 → Settings → API 中获取。
+> Get these from your [Supabase Dashboard](https://supabase.com/dashboard) → Project → Settings → API.
 
-### 4. 启动开发服务器
+### 4. Run the development server
 
 ```bash
 npm run dev
 ```
 
-打开 [http://localhost:3000](http://localhost:3000) 查看效果。
+Open [http://localhost:3000](http://localhost:3000) to see it running.
 
 ---
 
-## 📁 项目结构
+## Project Structure
 
 ```
 lib-hero-catalog/
-├── app/                # Next.js App Router 页面
-├── components/         # 可复用组件
-├── lib/                # Supabase 客户端及工具函数
-└── public/             # 静态资源
+├── app/               # Next.js App Router pages
+├── components/        # Reusable UI components
+├── lib/               # Supabase client & utilities
+└── public/            # Static assets
 ```
 
 ---
 
-## 📄 License
+## A Note
+
+This project exists because of Shuyun's spark of an idea on a quiet finals afternoon. Sometimes the best things are built just to make one place feel a little more alive.
+
+---
+
+## License
 
 MIT
