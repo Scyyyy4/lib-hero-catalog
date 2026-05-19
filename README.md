@@ -2,9 +2,9 @@
 
 > *Born in a library during finals week.*
 
-It started with a simple idea from my friend **LING Shuyun** — we were cramming for finals together at the library when she turned to me and said: *"You're an engineering student, right? Can you build something that makes this place a little less boring?"*
+My friend **LING Shuyun** came up with the whole idea — we were cramming for finals together at the library when she envisioned a little app that could make the long study sessions feel less monotonous. She had the concept and the features mapped out. I’m the engineering student, so I built it.
 
-So I did. **Lib Hero Catalog** is a personal record-keeping app for the library — a place to catalog the interesting people you spot, log the encounters that break the monotony, and capture your thoughts in a diary. Because every library has its own cast of characters.
+**Lib Hero Catalog** is a personal record-keeping app for the library — catalog the interesting people you spot, log encounters that break the silence, and capture your thoughts in a diary. Because every library has its own cast of characters.
 
 🌐 **Live at: [lib-hero-catalog.vercel.app](https://lib-hero-catalog.vercel.app)**
 
@@ -81,7 +81,7 @@ lib-hero-catalog/
 
 ## A Note
 
-This project exists because of Shuyun's spark of an idea on a quiet finals afternoon. Sometimes the best things are built just to make one place feel a little more alive.
+All credit for the concept goes to Shuyun. This is her idea, brought to life.
 
 ---
 
