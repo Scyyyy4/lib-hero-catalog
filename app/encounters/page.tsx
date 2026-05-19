@@ -74,7 +74,7 @@ export default async function EncountersPage() {
       ) : null}
 
       {success && result.data.length === 0 ? (
-        <p className="text-sm text-stone-600">还没有遇见记录。</p>
+        <p className="text-sm text-stone-400">还没有遇见记录。</p>
       ) : null}
 
       {success && result.data.length > 0 ? (

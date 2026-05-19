@@ -74,7 +74,7 @@ export default async function HeroesPage() {
       ) : null}
 
       {success && result.data.length === 0 ? (
-        <p className="text-sm text-stone-600">还没有英雄档案。</p>
+        <p className="text-sm text-stone-400">还没有英雄档案。</p>
       ) : null}
 
       {success && result.data.length > 0 ? (
