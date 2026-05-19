@@ -74,8 +74,8 @@ export default async function DiaryPage() {
       ) : null}
 
       {result.ok && result.entries.length === 0 ? (
-        <p className="text-sm text-stone-600">
-          表里还没有日记。可在 Supabase 执行示例插入语句，或自行添加数据。
+        <p className="text-sm text-stone-400">
+          还没有日记，点击右上角「写今天的日记」开始记录吧。
         </p>
       ) : null}
 
