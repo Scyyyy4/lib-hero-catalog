@@ -81,7 +81,7 @@ export default async function HeroesPage() {
         <ul className="grid gap-5 sm:grid-cols-2">
           {result.data.map((hero) => (
             <li key={hero.id}>
-              <HeroCard hero={hero} />
+              <HeroCard hero={hero} canDelete={!!user} />
             </li>
           ))}
         </ul>

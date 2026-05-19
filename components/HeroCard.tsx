@@ -1,7 +1,10 @@
 import type { HeroProfile } from "@/types/hero";
+import { DeleteButton } from "@/components/DeleteButton";
+import { deleteHeroProfile } from "@/lib/heroes/delete-hero-profile";
 
 type HeroCardProps = {
   hero: HeroProfile;
+  canDelete?: boolean;
 };
 
 const typeLabels: Record<HeroProfile["type"], string> = {
@@ -9,7 +12,7 @@ const typeLabels: Record<HeroProfile["type"], string> = {
   guest: "非用户英雄",
 };
 
-export function HeroCard({ hero }: HeroCardProps) {
+export function HeroCard({ hero, canDelete = false }: HeroCardProps) {
   const typeStyles =
     hero.type === "user"
       ? "bg-emerald-100/90 text-emerald-800 ring-emerald-200/80"
@@ -21,11 +24,19 @@ export function HeroCard({ hero }: HeroCardProps) {
         <h3 className="font-serif text-xl font-semibold text-stone-800 sm:text-2xl">
           {hero.name}
         </h3>
-        <span
-          className={`inline-flex shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${typeStyles}`}
-        >
-          {typeLabels[hero.type]}
-        </span>
+        <div className="flex items-center gap-2">
+          <span
+            className={`inline-flex shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset ${typeStyles}`}
+          >
+            {typeLabels[hero.type]}
+          </span>
+          {canDelete && (
+            <DeleteButton
+              label="删除英雄"
+              onDelete={() => deleteHeroProfile(hero.id)}
+            />
+          )}
+        </div>
       </div>
       <p className="text-sm text-stone-600">
         <span className="font-medium text-stone-700">常出现的馆 · </span>

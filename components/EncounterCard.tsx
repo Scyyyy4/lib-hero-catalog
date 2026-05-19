@@ -1,7 +1,10 @@
 import type { Encounter } from "@/types/encounter";
+import { DeleteButton } from "@/components/DeleteButton";
+import { deleteEncounter } from "@/lib/encounters/delete-encounter";
 
 type EncounterCardProps = {
   encounter: Encounter;
+  canDelete?: boolean;
 };
 
 function ratingStars(n: number) {
@@ -23,19 +26,27 @@ function hasDisplayRating(
   );
 }
 
-export function EncounterCard({ encounter }: EncounterCardProps) {
+export function EncounterCard({ encounter, canDelete = false }: EncounterCardProps) {
   const showRating = hasDisplayRating(encounter.rating);
   const ratingDisplay = showRating ? ratingStars(encounter.rating) : null;
 
   return (
     <article className="card-surface flex flex-col gap-3 p-5 sm:p-6">
-      <div>
-        <p className="text-xs font-medium uppercase tracking-wide text-stone-500">
-          遇见了谁
-        </p>
-        <p className="mt-1 font-serif text-xl font-semibold text-stone-800 sm:text-2xl">
-          {encounter.heroName}
-        </p>
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wide text-stone-500">
+            遇见了谁
+          </p>
+          <p className="mt-1 font-serif text-xl font-semibold text-stone-800 sm:text-2xl">
+            {encounter.heroName}
+          </p>
+        </div>
+        {canDelete && (
+          <DeleteButton
+            label="删除记录"
+            onDelete={() => deleteEncounter(encounter.id)}
+          />
+        )}
       </div>
       <p className="text-sm font-medium text-stone-800">
         <span className="text-stone-500">library · </span>

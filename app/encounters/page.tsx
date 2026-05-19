@@ -52,8 +52,6 @@ export default async function EncountersPage() {
           </p>
           <ul className="mt-2 list-inside list-disc space-y-1 text-stone-600">
             {result.error.missing.map((key) => (
-              <li key={key}>
-                <code className="text-xs">{key}</code>
               </li>
             ))}
           </ul>
@@ -81,7 +79,7 @@ export default async function EncountersPage() {
         <ul className="list-stack">
           {result.data.map((encounter) => (
             <li key={encounter.id}>
-              <EncounterCard encounter={encounter} />
+              <EncounterCard encounter={encounter} canDelete={!!user} />
             </li>
           ))}
         </ul>
