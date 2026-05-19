@@ -1,3 +1,5 @@
+"use client";
+
 import type { Encounter } from "@/types/encounter";
 import { DeleteButton } from "@/components/DeleteButton";
 import { deleteEncounter } from "@/lib/encounters/delete-encounter";

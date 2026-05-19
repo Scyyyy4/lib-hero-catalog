@@ -1,3 +1,5 @@
+"use client";
+
 import type { HeroProfile } from "@/types/hero";
 import { DeleteButton } from "@/components/DeleteButton";
 import { deleteHeroProfile } from "@/lib/heroes/delete-hero-profile";

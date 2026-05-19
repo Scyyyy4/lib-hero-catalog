@@ -1,3 +1,5 @@
+"use client";
+
 import type { DiaryEntry } from "@/types/diary";
 import { DeleteButton } from "@/components/DeleteButton";
 import { deleteDiaryEntry } from "@/lib/diary/delete-diary-entry";
