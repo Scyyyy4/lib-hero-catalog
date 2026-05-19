@@ -15,7 +15,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="ABOUT"
         title="关于 lib英雄图鉴"
-        subtitle="一个偏纸感、偏校园与日记气质的小站，用来安放与 library 有关的遇见与自白。"
+        subtitle="记在 library 里的人，和记在自己身上的事。"
       />
 
       <div className="card-surface space-y-5 p-6 sm:p-8">
@@ -26,7 +26,7 @@ export default function AboutPage() {
         <p className="text-sm leading-relaxed text-stone-700 sm:text-[0.95rem]">
           网站刻意拆成两条线，像笔记本的左右两栏：一边朝外，记录你在不同
           library
-          遇见的人与事；一边朝内，记录你在馆内的学习、情绪与细碎观察。以后也许会接上账号、认领、成就或社交，但第一版只想把版式与叙事搭稳。
+          遇见的人与事；一边朝内，记录你在馆内的学习、情绪与细碎观察。以后也许会接上账号、认领、成就或社交，但第一版就先这样了。
         </p>
       </div>
 
@@ -34,19 +34,18 @@ export default function AboutPage() {
         <SectionTitle
           id="threads-heading"
           title="两条叙事线"
-          subtitle="信息架构上，对外的「事件与人物」与对内的「日记」分开存放，便于以后分表与权限设计。"
         />
         <ul className="list-stack">
           <li className="card-surface p-5 sm:p-6">
             <p className="text-sm leading-relaxed text-stone-700 sm:text-[0.95rem]">
               <span className="font-semibold text-stone-800">遇见别人</span>
-              ：英雄图鉴与遇见记录，偏向「谁、在哪、留下了怎样的侧写」。适合给那些你愿意称之为英雄、却未必交换过姓名的人。
+              ：记那些在图书馆遇到的人——坐在对面的陌生人、背包上挂了徽章的人、每天都来但你们从没说过话的人。
             </p>
           </li>
           <li className="card-surface p-5 sm:p-6">
             <p className="text-sm leading-relaxed text-stone-700 sm:text-[0.95rem]">
               <span className="font-semibold text-stone-800">记录自己</span>
-              ：馆内日记，偏向「我这一天在馆内完成了什么、心情如何」。像给自己写的借书卡备注。
+              ：馆内日记，写今天看了什么、卡在哪里、或者只是坐着发了一会儿呆。
             </p>
           </li>
         </ul>
@@ -64,7 +63,7 @@ export default function AboutPage() {
           认领档案（规划中）
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-stone-600">
-          若你在图鉴里认出了自己，将来可以在此认领对应档案，把「非用户」慢慢改成「用户故事」。当前版本为静态前端，不包含登录与数据库。
+          如果你在图鉴里看到了自己，以后可以来认领。现在还没做，先放着。
         </p>
         <Link
           href="/heroes"
