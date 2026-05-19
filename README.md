@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 自由英雄目录 · Lib Hero Catalog
 
-## Getting Started
+一个专为英雄 / 角色爱好者设计的个人记录平台。用户可以注册登录、创建英雄档案、记录相遇故事，并写下属于自己的日记。
 
-First, run the development server:
+🌐 **线上体验：[lib-hero-catalog.vercel.app](https://lib-hero-catalog.vercel.app)**
+
+---
+
+## ✨ 功能特性
+
+- 🔐 **用户认证** — 邮箱注册 / 登录，支持邮件验证
+- 🦸 **英雄档案** — 创建和管理你的英雄角色信息
+- ⚔️ **相遇记录** — 记录与英雄之间的每一次相遇
+- 📖 **日记系统** — 写下你的冒险日志和个人感悟
+
+---
+
+## 🛠 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| 前端框架 | [Next.js 14](https://nextjs.org) (App Router) |
+| 语言 | TypeScript |
+| 样式 | Tailwind CSS |
+| 后端 / 数据库 | [Supabase](https://supabase.com) (PostgreSQL + Auth + RLS) |
+| 部署 | [Vercel](https://vercel.com) |
+
+---
+
+## 🚀 本地运行
+
+### 1. 克隆项目
+
+```bash
+git clone https://github.com/Scyyyy4/lib-hero-catalog.git
+cd lib-hero-catalog
+```
+
+### 2. 安装依赖
+
+```bash
+npm install
+```
+
+### 3. 配置环境变量
+
+在项目根目录创建 `.env.local` 文件：
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=你的_Supabase_项目_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=你的_Supabase_Anon_Key
+```
+
+> 在 [Supabase Dashboard](https://supabase.com/dashboard) → 项目 → Settings → API 中获取。
+
+### 4. 启动开发服务器
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 [http://localhost:3000](http://localhost:3000) 查看效果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 项目结构
 
-## Learn More
+```
+lib-hero-catalog/
+├── app/                # Next.js App Router 页面
+├── components/         # 可复用组件
+├── lib/                # Supabase 客户端及工具函数
+└── public/             # 静态资源
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
