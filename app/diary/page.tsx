@@ -83,7 +83,7 @@ export default async function DiaryPage() {
         <ul className="list-stack">
           {result.entries.map((entry) => (
             <li key={entry.id}>
-              <DiaryCard entry={entry} />
+              <DiaryCard entry={entry} canDelete={!!user} />
             </li>
           ))}
         </ul>
